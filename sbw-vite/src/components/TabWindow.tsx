@@ -1,7 +1,7 @@
 import React from 'react';
 
-import TopBar from './TopBar';
 import Form from './Form';
+import SubmitButton from './SubmitButton';
 
 export default function TabWindow(props) {
   const isOpen = props.isOpen;
@@ -9,9 +9,10 @@ export default function TabWindow(props) {
   return (
     <div>
       {isOpen ? (
-        <div className='absolute top-16 left-2 w-80 h-80 bg-teal-400 z-10'>
+        <div className='absolute top-16 left-2 w-80 h-52 bg-white z-10 rounded-xl shadow-xl'>
           <Form />
           <Form />
+          <SubmitButton />
         </div>
       ) : null}
     </div>
